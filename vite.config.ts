@@ -11,4 +11,9 @@ export default defineConfig({
     setupFiles: './src/test/setup.ts',
     css: false,
   },
+  define: {
+    'process.env': {},
+    'process.platform': JSON.stringify('browser'),
+    'process.version': JSON.stringify(''),
+  },
 })
