@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import { Link, useLocation } from 'react-router-dom';
 import { tools } from '../utils/seo';
-import AdUnit from './AdUnit';
+// import AdUnit from './AdUnit';
 
 interface ToolPageProps {
     toolIndex: number;
