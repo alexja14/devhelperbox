@@ -318,3 +318,25 @@ describe('TimestampConverter', () => {
         });
     });
 });
+
+// ─── 14. PHP FORMATTER ────────────────────────────────────────────────────────
+import PhpFormatter from '../pages/PhpFormatter';
+
+describe('PhpFormatter', () => {
+    it('renders input and output areas', () => {
+        renderWithProviders(<PhpFormatter />, '/php-formatter');
+        expect(screen.getByPlaceholderText(/<\?php/i)).toBeInTheDocument();
+        expect(screen.getByPlaceholderText(/Formatted code will appear here/i)).toBeInTheDocument();
+    });
+
+    it('has beautify button', () => {
+        renderWithProviders(<PhpFormatter />, '/php-formatter');
+        expect(screen.getByText('Beautify PHP')).toBeInTheDocument();
+    });
+
+    it('shows indentation options', () => {
+        renderWithProviders(<PhpFormatter />, '/php-formatter');
+        expect(screen.getByText('2 spaces')).toBeInTheDocument();
+        expect(screen.getByText('4 spaces')).toBeInTheDocument();
+    });
+});

@@ -73,6 +73,10 @@ export default function Sidebar() {
 
                 {/* Footer */}
                 <div className="px-5 py-4 border-t border-border">
+                    <NavLink to="/support" className="flex items-center gap-2 text-xs text-text-muted hover:text-accent transition-colors mb-2">
+                        <span>❤️</span>
+                        <span>Support & Donate</span>
+                    </NavLink>
                     <div className="text-[10px] text-text-muted">
                         100% Client-Side · No Data Sent
                     </div>

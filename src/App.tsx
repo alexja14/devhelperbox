@@ -13,6 +13,8 @@ import UrlEncoder from './pages/UrlEncoder';
 import UuidGenerator from './pages/UuidGenerator';
 import DiffChecker from './pages/DiffChecker';
 import TimestampConverter from './pages/TimestampConverter';
+import PhpFormatter from './pages/PhpFormatter';
+import SupportPage from './pages/SupportPage';
 
 export default function App() {
   return (
@@ -31,6 +33,8 @@ export default function App() {
         <Route path="/uuid-generator" element={<UuidGenerator />} />
         <Route path="/diff-checker" element={<DiffChecker />} />
         <Route path="/timestamp" element={<TimestampConverter />} />
+        <Route path="/php-formatter" element={<PhpFormatter />} />
+        <Route path="/support" element={<SupportPage />} />
       </Route>
     </Routes>
   );

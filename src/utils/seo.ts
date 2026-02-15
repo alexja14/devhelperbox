@@ -117,4 +117,13 @@ export const tools: ToolMeta[] = [
         icon: '⏱',
         color: '#eab308',
     },
+    {
+        title: 'PHP Formatter',
+        metaTitle: 'PHP Beautifier & Formatter Online - Free | DevHelperBox',
+        description: 'Beautify and format PHP code online. Fix indentation, spacing, and styling of PHP scripts. Free, client-side, no data sent to server.',
+        keywords: 'php formatter, php beautifier, format php online, php pretty print, php indent',
+        path: '/php-formatter',
+        icon: '🐘',
+        color: '#777bb4',
+    },
 ];

@@ -1,6 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import { Link, useLocation } from 'react-router-dom';
 import { tools } from '../utils/seo';
+import AdUnit from './AdUnit';
 
 interface ToolPageProps {
     toolIndex: number;
@@ -59,6 +60,13 @@ export default function ToolPage({ toolIndex, children }: ToolPageProps) {
                 </div>
 
                 {children}
+
+                {/* AdUnit Placeholder - Uncomment when ad units are created in AdSense */}
+                {/* 
+                <div className="mt-12">
+                     <AdUnit slot="YOUR_AD_SLOT_ID" />
+                </div> 
+                */}
             </div>
         </>
     );
