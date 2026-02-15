@@ -15,5 +15,6 @@ export default defineConfig({
     'process.env': {},
     'process.platform': JSON.stringify('browser'),
     'process.version': JSON.stringify(''),
+    'process.cwd': '() => "/"',
   },
 })
