@@ -90,7 +90,21 @@ export default function PhpFormatter() {
                         <textarea
                             value={input}
                             onChange={(e) => setInput(e.target.value)}
-                            placeholder="<?php\n\necho 'Hello World';"
+                            placeholder={`<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Mio Primo Script PHP</title>
+</head>
+<body>
+    <h1>Benvenuto</h1>
+    <?php
+        // Questo è un commento in PHP
+        $nome = "Utente";
+        echo "<p>Ciao, " . $nome . "! Oggi è il " . date('d/m/Y') . ".</p>";
+    ?>
+</body>
+</html>`}
                             className="flex-1 w-full resize-none bg-transparent text-text-primary text-sm font-mono p-4 outline-none placeholder:text-text-muted/50"
                             spellCheck={false}
                         />
