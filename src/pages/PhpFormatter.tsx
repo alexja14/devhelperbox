@@ -3,7 +3,11 @@ import ToolPage from '../components/ToolPage';
 import { useInputHistory } from '../hooks/useLocalStorage';
 import { useCopyToClipboard } from '../hooks/useCopyToClipboard';
 import prettier from 'prettier/standalone';
-import phpPlugin from '@prettier/plugin-php/standalone';
+import * as phpPluginRaw from '@prettier/plugin-php/standalone';
+
+// Strip the circular 'default' property that Vite's ESM interop adds to UMD modules
+// — prettier iterates all plugin properties and chokes on it
+const { default: _, ...phpPlugin } = phpPluginRaw as any;
 
 export default function PhpFormatter() {
     const [input, setInput] = useState('');
@@ -21,7 +25,8 @@ export default function PhpFormatter() {
                 plugins: [phpPlugin],
                 tabWidth: indent,
                 printWidth: 80,
-            });
+                phpVersion: '8.3',
+            } as any);
             setOutput(formatted);
             setError(null);
             addToHistory(input);
